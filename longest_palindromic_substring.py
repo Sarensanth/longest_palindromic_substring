@@ -2,7 +2,7 @@ def longest_palindromic_substring(s):
     res=1
     str_res=s[0]
     for i in range(0,len(s)):
-        #odd polindromes
+        #odd palindromes
         left=i
         right=i
         while(left>=0 and right<len(s) and s[left]==s[right]):
@@ -12,7 +12,7 @@ def longest_palindromic_substring(s):
                 # print(str_res)
             left-=1
             right+=1
-        #even polindromes
+        #even palindromes
         left=i
         right=i+1
         while(left>=0 and right<len(s) and s[left]==s[right]):
